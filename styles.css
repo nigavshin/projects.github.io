@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+/*1блок*/
+.fixed-container {
+  width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  width: 280px;
+}
+.menu-list {
+  display: inline-block;
+  margin-right: 15px;
+}
+.menu-item {
+  text-decoration: none;
+  color: #1f1f24;
+  font-weight: 600;
+}
+.calling {
+  display: flex;
+  justify-content: space-between;
+  width: 455px;
+}
+.phone {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1f1f24;
+  font-family: "Roboto", sans-serif;
+  padding-top: 8px;
+}
+.ord-call-btn {
+  text-align: center;
+  width: 207px;
+  height: 45px;
+  font-size: 16px;
+  border: 1px solid #f82370;
+  color: #f53f4f;
+  background-color: #fbfbfb;
+}
+.container {
+  background-image: url("img/man-backgr.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: #fbfbfb;
+  position: relative;
+}
+.content-main-scr {
+  height: 695px;
+  position: relative;
+}
+.content-main-scr__txt {
+  position: absolute;
+  top: 200px;
+}
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+  color: #1f1f24;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.subtitle {
+  font-size: 25px;
+  color: #8993ad;
+  font-family: "Roboto", sans-serif;
+  margin: 44px 0 52px;
+}
+.content-main-scr__btn {
+  text-align: center;
+  width: 270px;
+  height: 60px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ff4e2e;
+  border: none;
+}
+#man-backgr {
+  height: 634px;
+  width: 818px;
+}
+/*Разбросанные элементы в градиенте (1 блок)*/
+.signs-lin {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(45deg, #fa0891, #f26522);
+  margin: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#signs-1 {
+  font-size: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 125px;
+  left: 140px;
+}
+#signs-2 {
+  font-size: 57px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 370px;
+  left: 244px;
+}
+#signs-3 {
+  font-size: 40px;
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 675px;
+  left: 375px;
+}
+#signs-4 {
+  font-size: 30px;
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 170px;
+  left: 791px;
+}
+#signs-5 {
+  font-size: 40px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 542px;
+  left: 957px;
+}
+
+/*Второй блок*/
+#what_i_doing {
+  height: 647px;
+  background-color: white;
+  margin-top: 140px;
+}
+h2 {
+  font-size: 54px;
+  font-weight: bold;
+  color: #262626;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-align: center;
+}
+.what_i_doing_cont {
+  margin: 100px 0 100px;
+}
+.skills {
+  display: flex;
+  justify-content: space-between;
+}
+.skills-item {
+  padding-top: 100px;
+  width: 270px;
+}
+.skills-item p {
+  font-size: 20px;
+  color: #8993ad;
+  font-family: "Roboto", sans-serif;
+  margin: 28px auto;
+  text-align: center;
+}
+.skills-item img {
+  margin-left: 100px;
+}
+#painted-btn {
+  text-align: center;
+  width: 270px;
+  height: 60px;
+  font-size: 18px;
+  border: none;
+  color: #fbfbfb;
+  background-color: #ff4e2e;
+}
+.cont-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+/*Третий блок*/
+#examples_of_work {
+  height: 860px;
+  background-color: #fbfbfb;
+}
+.examples_of_work_cont {
+  margin: 110px 0 105px;
+}
+#slider {
+  /*положение слайдера*/
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+#slider {
+  /*центровка слайдера*/
+  margin: 0 auto;
+}
+
+#slides article {
+  /*все изображения справа друг от доруга*/
+  width: 20%;
+  float: left;
+}
+
+#slides .image {
+  /*устанавливает общий размер блока с изображениями*/
+  width: 400%;
+  line-height: 0;
+}
+
+#overflow {
+  /*сркывает все, что находится за пределами этого блока*/
+  width: 100%;
+  overflow: hidden;
+}
+
+article img {
+  /*размер изображений слайдера*/
+  width: 100%;
+}
+
+#desktop:checked ~ #slider {
+  /*размер всего слайдера*/
+  max-width: 960px; /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(4),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3) {
+  background: url("img/prev.png") no-repeat; /*заливка фона картинкой без повторений*/
+  float: left;
+  margin: 0 0 0 -84px; /*сдвиг влево*/
+  display: block;
+  height: 68px;
+  width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch5:checked ~ #controls label:nth-child(1) {
+  background: url("img/next.png") no-repeat; /*заливка фона картинкой без повторений*/
+  float: right;
+  margin: 0 -84px 0 0; /*сдвиг вправо*/
+  display: block;
+  height: 68px;
+  width: 68px;
+}
+
+label,
+a {
+  /*при наведении на стрелки или переключатели - курсор изменится*/
+  cursor: pointer;
+}
+
+.all input {
+  /*скрывает стандартные инпуты (чекбоксы) на странице*/
+  display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image {
+  margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+
+#controls {
+  /*положение блока всех управляющих элементов*/
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+
+#active label {
+  /*стиль отдельного переключателя*/
+  border-radius: 10px; /*скругление углов*/
+  display: inline-block; /*расположение в строку*/
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+}
+
+#active {
+  /*расположение блока с переключателями*/
+  margin: 23% 0 0;
+  text-align: center;
+}
+
+#active label:hover {
+  /*поведение чекбокса при наведении*/
+  background: #76c8ff;
+  border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch5:checked ~ #active label:nth-child(4) {
+  background: #18a3dd;
+  border-color: #18a3dd !important;
+}
+
+#slides .image {
+  /*анимация пролистывания изображений*/
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#controls label:hover {
+  /*прозрачность стрелок при наведении*/
+  opacity: 0.6;
+}
+
+#controls label {
+  /*прозрачность стрелок при отводе курсора*/
+  transition: opacity 0.2s ease-out;
+}
+/*Четвертый блок*/
+.lin-ban-cont {
+  height: 361px;
+  background: linear-gradient(70deg, #ff8f5a, #ff2f96);
+  position: relative;
+}
+h3 {
+  font-size: 45px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.lin-ban-cont-text {
+  padding-top: 97px;
+  padding-left: 495px;
+}
+.lin-ban-cont-text p {
+  font-size: 18px;
+  color: #fbfbfb;
+  font-family: "Roboto", sans-serif;
+  margin: 28px auto;
+}
+/*Разбросанные элементы в градиенте (1 блок)*/
+.signs-wh {
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: white;
+}
+#signs-6 {
+  font-size: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 65px;
+  left: 125px;
+}
+#signs-7 {
+  font-size: 57px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 260px;
+  left: 245px;
+}
+#signs-8 {
+  font-size: 30px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 305px;
+  right: 407px;
+}
+#signs-9 {
+  font-size: 30px;
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 84px;
+  right: 211px;
+}
+#signs-10 {
+  font-size: 40px;
+  transform: rotate(-15deg);
+  position: absolute;
+  bottom: 47px;
+  right: 40px;
+}
+/*Фуутер*/
+.footer {
+  height: 262px;
+  background-color: #ffffff;
+}
+.footer-container {
+  width: 1148px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 86px;
+}
+.menu-footer {
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.list-foot {
+  margin-bottom: 15px;
+}
+.item-menu-foot {
+  text-decoration: none;
+  color: #8993ad;
+}
+.info-contact {
+  margin: 0;
+  padding: 0;
+}
+.contact_inf {
+  text-decoration: none;
+  font-size: 25px;
+  color: #1f1f24;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+}
+.mail {
+  margin-top: 34px;
+  list-style: none;
+}
+.phone {
+  list-style: none;
+}
+.social-net {
+  margin-top: 25px;
+}
+/*футер футер*/
+.footer-footer {
+  background-color: #31293c;
+  height: 80px;
+}
+.f-xtx {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0px;
+  padding-top: 30px;
+}
