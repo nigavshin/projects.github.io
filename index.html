@@ -3,6 +3,8 @@
   <head>
     <title>Дипломный проект</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="jquery-3.5.1.js"></script>
+    <script src="script.js"></script>
     <meta charset="UTF-8" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -44,7 +46,7 @@
       </div>
     </section>
 
-    <!-- <section id="what_i_doing">
+    <section id="what_i_doing">
       <div class="fixed-container">
         <div class="what_i_doing_cont">
           <h2>
@@ -80,37 +82,43 @@
       <div class="fixed-container">
         <div class="examples_of_work_cont">
           <h2>Примеры моих работ</h2>
-          <div class="all">
-            <input checked type="radio" name="respond" id="desktop" />
-            <article id="slider">
-              <input checked type="radio" name="slider" id="switch1" />
-              <input type="radio" name="slider" id="switch2" />
-              <input type="radio" name="slider" id="switch3" />
-              <input type="radio" name="slider" id="switch4" />
-              <input type="radio" name="slider" id="switch5" />
-              <div id="slides">
-                <div id="overflow">
-                  <div class="image">
-                    <article><img src="img/1-slider-psyhology.png" /></article>
-                    <article><img src="img/2-slider-kids_shop.png" /></article>
-                    <article><img src="img/3-slider-fish_shop.png" /></article>
-                    <article><img src="img/1-slider-psyhology.png" /></article>
-                  </div>
-                </div>
+          <div id="block-for-slider">
+            <div id="viewport">
+              <ul id="slidewrapper">
+                <li class="slide">
+                  <img
+                    src="img/1-slider-psyhology.png"
+                    alt="1"
+                    class="slide-img"
+                  />
+                </li>
+                <li class="slide">
+                  <img
+                    src="img/2-slider-kids_shop.png"
+                    alt="2"
+                    class="slide-img"
+                  />
+                </li>
+                <li class="slide">
+                  <img
+                    src="/img/3-slider-fish_shop.png"
+                    alt="3"
+                    class="slide-img"
+                  />
+                </li>
+                <li class="slide">
+                  <img
+                    src="/img/1-slider-psyhology.png"
+                    alt="4"
+                    class="slide-img"
+                  />
+                </li>
+              </ul>
+              <div id="prev-next-btns">
+                <div id="prev-btn"></div>
+                <div id="next-btn"></div>
               </div>
-              <div id="controls">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-              </div>
-              <div id="active">
-                <label for="switch1"></label>
-                <label for="switch2"></label>
-                <label for="switch3"></label>
-                <label for="switch4"></label>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
       </div>
@@ -183,6 +191,6 @@
     </section>
     <section class="footer-footer">
       <p class="f-xtx">© Дмитрий Алексеев, 2016 – 2018</p>
-    </section> -->
+    </section>
   </body>
 </html>

@@ -1,25 +1,53 @@
-$(function Slider(width_li, margin_right_li, col_view_img) {
-  var step = width_li + margin_right_li,
-    slider_box_width = col_view_img * step - margin_right_li;
-  ($col_img = $("#slider_box>ul>li").length),
-    (col_main_left = 0),
-    (max_col_main_left = $col_img * step);
-  $("#slider_box").width(width_li).css("margin-right", margin_right_li);
-  $("#slider-nav_left").click(function () {
-    if (-col_main_left == max_col_main_left - col_view_img * step) {
-      col_main_left = 0;
-    } else {
-      col_main_left = col_main_left - step;
+var slideNow = 1;
+var slideCount = $("#slidewrapper").children().length;
+var translateWidth = 0;
+var slideInterval = 3000;
+var navBtnId = 0;
+
+function nextSlide() {
+  if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+    $("#slidewrapper").css("transform", "translate(0, 0)");
+    slideNow = 1;
+  } else {
+    translateWidth = -$("#viewport").width() * slideNow;
+    $("#slidewrapper").css({
+      transform: "translate(" + translateWidth + "px, 0)",
+      "-webkit-transform": "translate(" + translateWidth + "px, 0)",
+      "-ms-transform": "translate(" + translateWidth + "px, 0)",
+    });
+    slideNow++;
+  }
+}
+
+$(document).ready(function () {
+  var switchInterval = setInterval(nextSlide, setInterval);
+
+  $("#viewport").hover(
+    function () {
+      clearInterval(switchInterval);
+    },
+    function () {
+      switchInterval = setInterval(nextSlide, slideInterval);
     }
-    $("#slider_box>ul").css("margin-left"), col_main_left + "px";
-  });
-  $("#slider-nav_right").click(function () {
-    if (col_main_left == 0) {
-      col_main_left = -max_col_main_left + col_view_img + step;
-    } else {
-      col_main_left = col_main_left + step;
-    }
-    $("#slider_box>ul").css("margin-left", col_main_left + "px");
-  });
+  );
 });
-$(Slider(200, 10, 4));
+
+function prevSlide() {
+  if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
+    translateWidth = -$("viewport").width() * (slideCount - 1);
+    $("slidewrapper").css({
+      transform: "translate(" + translateWidth + "px,0)",
+      "-webkit-transform": "translate(" + translateWidth + "px,0)",
+      "-ms-transform": "translate(" + translateWidth + "px,0)",
+    });
+    slideNow = slideCount;
+  } else {
+    translateWidth = -$("#viewport").width() * (slideNow - 2);
+    $("slidewrapper").css({
+      transform: "translate(" + translateWidth + "px,0)",
+      "-webkit-transform": "translate(" + translateWidth + "px,0)",
+      "-ms-transform": "translate(" + translateWidth + "px,0)",
+    });
+    slideNow--;
+  }
+}
