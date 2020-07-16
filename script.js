@@ -1,8 +1,8 @@
-var slideNow = 1;
-var slideCount = $("#slidewrapper").children().length;
-var translateWidth = 0;
-var slideInterval = 3000;
-var navBtnId = 0;
+const slideNow = 1;
+const slideCount = $("#slidewrapper").children().length;
+const translateWidth = 0;
+const slideInterval = 3000;
+const navBtnId = 0;
 
 function nextSlide() {
   if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
